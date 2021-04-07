@@ -1,6 +1,6 @@
 //react snippet
 import React from 'react'
-import Search from '../users/Search'
+
 
 const Navbar = ({icon, title}) => {
     return(
