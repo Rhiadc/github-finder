@@ -40,21 +40,22 @@ class App extends Component{
   render(){
     const {loading, users} = this.state
     return (
-      <div className="App">
-        < Navbar title = "Github Finder" icon ="icon-github" />
-        <Alert alert={this.state.alert} />
-        <div className="conainer">
-        < Search 
-          searchUsers = {this.searchUsers} 
-          clearUsers = {this.clearUsers}  
-          showClear = {users.length > 0 ? true : false}
-          setAlert = {this.setAlert}
-          />
-        < Users loading={loading} users={users}/>
-        
+      <Router>
+        <div className="App">
+          < Navbar title = "Github Finder" icon ="icon-github" />
+          <Alert alert={this.state.alert} />
+          <div className="conainer">
+            < Search 
+              searchUsers = {this.searchUsers} 
+              clearUsers = {this.clearUsers}  
+              showClear = {users.length > 0 ? true : false}
+              setAlert = {this.setAlert}
+              />
+            < Users loading={loading} users={users}/>
+          </div>
         </div>
-        
-      </div>
+      </Router>
+    
     );
   }
 }
